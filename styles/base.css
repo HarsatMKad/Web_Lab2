@@ -1,0 +1,81 @@
+body {
+  background-color: #1B1A17;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #A35709;
+  border-radius: 4px;
+  border-color: #FF8303;
+  background-color: #1F1E1B;
+}
+
+.text_stile, .share_button, .choice_button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  color: #F0E3CA;
+}
+
+.choice_button {
+  width: 64px;
+  height: 24px;
+}
+.choice_button:hover {
+  border-color: #A35709;
+}
+
+.add_button {
+  width: 70px;
+  height: 70px;
+  background-color: #1B1A17;
+  color: #FF8303;
+  font-size: 50px;
+  border: 2px solid;
+}
+.add_button:hover {
+  background-color: #1F1E1B;
+}
+
+.dell_button {
+  width: 32px;
+  height: 32px;
+  color: #FF8303;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid;
+  background-color: #1B1A17;
+}
+.dell_button:hover {
+  background-color: #1F1E1B;
+}
+
+.share_button {
+  font-size: 16px;
+  font-weight: 600;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B1A17;
+}
+.share_button:hover {
+  background-color: #1F1E1B;
+}
+
+input {
+  border: 1px solid #A35709;
+  border-radius: 4px;
+  border-color: #FF8303;
+  background-color: #1B1A17;
+  padding: 8px;
+  color: #F0E3CA;
+}
+input:hover {
+  background-color: #1F1E1B;
+}
+
+/*# sourceMappingURL=base.css.map */
