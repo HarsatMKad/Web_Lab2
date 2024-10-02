@@ -6,6 +6,7 @@ $mark_color_hover: #A35709
 
 body
   background-color: $main_background_color
+  min-width: 600px
 
 button
   cursor: pointer
@@ -13,7 +14,6 @@ button
   border-radius: 4px
   border-color: $mark_color
   background-color: $light_background_color
-  
 
 .text_stile
   font-family: 'Roboto'
@@ -30,27 +30,6 @@ button
   &:hover
     border-color: $mark_color_hover
 
-.add_button
-  width: 70px
-  height: 70px
-  background-color: $main_background_color
-  color: $mark_color
-  font-size: 50px
-  border: 2px solid
-  &:hover
-    background-color: $light_background_color
-
-.dell_button
-  width: 32px
-  height: 32px
-  color: $mark_color
-  font-size: 14px
-  font-weight: 500
-  border: 2px solid
-  background-color: $main_background_color
-  &:hover
-    background-color: $light_background_color
-
 .share_button
   @extend .text_stile
   font-size: 16px
@@ -65,12 +44,31 @@ button
     background-color: $light_background_color
 
 input
+  width: 100%
   border: 1px solid $mark_color_hover
   border-radius: 4px
   border-color: $mark_color
   background-color: $main_background_color
-  padding: 8px
   color: $mark_text_color
   &:hover
     background-color: $light_background_color
-    
+
+.share_box
+  background-color: $main_background_color
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding: 14px 20px
+
+.share_box_button
+  width: 50px
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: none
+  background: none
+  background-image: url("../images/share_button_background.svg")
+  background-size: cover
+  &:hover
+    background-image: url("../images/share_button_background_hover.svg")

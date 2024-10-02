@@ -11,7 +11,7 @@ button {
   background-color: #1F1E1B;
 }
 
-.text_stile, .share_button, .choice_button {
+.text_stile, .zero_task_message_text, .share_button, .choice_button {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -77,4 +77,57 @@ input:hover {
   background-image: url("../images/share_button_background_hover.svg");
 }
 
-/*# sourceMappingURL=base.css.map */
+.create_task_form {
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 32px;
+}
+
+.tasks_inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 32px;
+}
+
+.create_tasks_input {
+  padding-left: 16px;
+  font-size: 26px;
+  height: 50%;
+}
+
+#title_tasks_input {
+  margin-bottom: 16px;
+}
+
+.add_button {
+  min-width: 160px;
+  height: 100%;
+  background-color: #1B1A17;
+  color: #FF8303;
+  font-size: 120px;
+  border: 2px solid;
+}
+.add_button:hover {
+  background-color: #1F1E1B;
+}
+
+.zero_task_message {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.separate_line {
+  width: 144px;
+  border: 3px solid #FF8303;
+}
+
+.zero_task_message_text {
+  font-size: 64px;
+}
+
+/*# sourceMappingURL=main_page.css.map */

@@ -11,7 +11,7 @@ button {
   background-color: #1F1E1B;
 }
 
-.text_stile, .share_button, .choice_button {
+.text_stile, .head_text_stile, .sub_text_stile, .share_button, .choice_button {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -77,4 +77,48 @@ input:hover {
   background-image: url("../images/share_button_background_hover.svg");
 }
 
-/*# sourceMappingURL=base.css.map */
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 32px;
+  margin: 32px;
+  border: 2px solid #A35709;
+  background-color: #1F1E1B;
+  border-radius: 8px;
+}
+
+.dell_button {
+  padding: 6px 16px 6px 16px;
+  color: #FF8303;
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 16px;
+  border: 2px solid;
+  background-color: #1B1A17;
+}
+.dell_button:hover {
+  background-color: #1F1E1B;
+}
+
+.head_text_stile {
+  line-height: 55px;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.sub_text_stile {
+  line-height: 35px;
+  font-size: 30px;
+}
+
+.task_text_area {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  max-width: 90%;
+  overflow-wrap: break-word;
+}
+
+/*# sourceMappingURL=task.css.map */

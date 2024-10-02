@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,63 @@
     <link href="https://fonts.cdnfonts.com/css/changa-one" rel="stylesheet">
 
     <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/task.css">
+    <link rel="stylesheet" href="../styles/main_page.css">
 
-    <title>Document</title>
+    <title>To Do List</title>
 </head>
-<body>
-    <button class="choice_button">Yes</button>
-    
-    <button class="add_button">+</button>
 
-    <button class="dell_button">X</button>
+<body>
+    <div class="create_task_form">
+        <div class="tasks_inputs">
+            <input class="create_tasks_input" id="title_tasks_input" type="text" placeholder="Title..."></input>
+            <input class="create_tasks_input" type="text" placeholder="About..."></input>
+        </div>
+        <button onclick="addFn()" class="add_button">+</button>
+    </div>
+
+    <script async src="../scripts/create_task.js"></script>
+
+    <div class="zero_task_message">
+        <hr class="separate_line">
+        <H2 class="zero_task_message_text">No tasks</H2>
+        <hr class="separate_line">
+    </div>
+
+    <div id="tasks_list">
+    </div>
+
+
+
+
+
 
     <button class="share_button"><img src="../images/share_button_icon.svg" alt=""></button>
     <button class="share_button"><img src="../images/edit_button_icon.svg" alt=""></button>
     <button class="share_button">i</button>
+    <button class="choice_button">Yes</button>
 
-    <input type="text" placeholder="Input"></input>
+    <div class="share_box">
+        <button class="share_box_button">
+            <img src="../images/share_button_copy.svg" alt="">
+        </button>
 
+        <button class="share_box_button">
+            <img src="../images/share_button_vk.svg" alt="">
+        </button>
+
+        <button class="share_box_button">
+            <img src="../images/share_button_telegram.svg" alt="">
+        </button>
+
+        <button class="share_box_button">
+            <img src="../images/share_button_whatsapp.svg" alt="">
+        </button>
+
+        <button class="share_box_button">
+            <img src="../images/share_button_facebook.svg" alt="">
+        </button>
+    </div>
 </body>
+
 </html>

@@ -1,0 +1,41 @@
+@use "base" as base
+
+.task
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: start
+    padding: 32px
+    margin: 32px
+    border: 2px solid base.$mark_color_hover
+    background-color: base.$light_background_color
+    border-radius: 8px
+
+.dell_button
+    padding: 6px 16px 6px 16px
+    color: base.$mark_color
+    font-size: 40px
+    font-weight: 400
+    margin-top: 16px
+    border: 2px solid
+    background-color: base.$main_background_color
+    &:hover
+        background-color: base.$light_background_color
+
+.head_text_stile
+    @extend .text_stile
+    line-height: 55px
+    font-weight: 600
+    font-size: 50px
+
+.sub_text_stile 
+    @extend .text_stile
+    line-height: 35px
+    font-size: 30px
+
+.task_text_area
+    display: flex
+    flex-direction: column
+    margin-right: 10px
+    max-width: 90%
+    overflow-wrap: break-word
