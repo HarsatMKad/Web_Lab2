@@ -11,25 +11,24 @@
     <link rel="stylesheet" href="../styles/base.css">
     <link rel="stylesheet" href="../styles/task.css">
     <link rel="stylesheet" href="../styles/main_page.css">
+    <link rel="stylesheet" href="../styles/task_del_alert.css">
+
+    <script async src="../scripts/create_task.js"></script>
+    <script async src="../scripts/delete_task.js"></script>
 
     <title>To Do List</title>
 </head>
 
 <body>
+    <div id="del_alert">
+    </div>
+
     <div class="create_task_form">
         <div class="tasks_inputs">
             <input class="create_tasks_input" id="title_tasks_input" type="text" placeholder="Title..."></input>
-            <input class="create_tasks_input" type="text" placeholder="About..."></input>
+            <input class="create_tasks_input" id="body_tasks_input" type="text" placeholder="About..."></input>
         </div>
         <button onclick="addFn()" class="add_button">+</button>
-    </div>
-
-    <script async src="../scripts/create_task.js"></script>
-
-    <div class="zero_task_message">
-        <hr class="separate_line">
-        <H2 class="zero_task_message_text">No tasks</H2>
-        <hr class="separate_line">
     </div>
 
     <div id="tasks_list">
@@ -43,7 +42,6 @@
     <button class="share_button"><img src="../images/share_button_icon.svg" alt=""></button>
     <button class="share_button"><img src="../images/edit_button_icon.svg" alt=""></button>
     <button class="share_button">i</button>
-    <button class="choice_button">Yes</button>
 
     <div class="share_box">
         <button class="share_box_button">
