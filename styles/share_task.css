@@ -10,7 +10,7 @@ button {
   background-color: #1F1E1B;
 }
 
-.text_stile, .alert_box, .choice_button {
+.text_stile, .choice_button {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -41,7 +41,7 @@ input:hover {
   background-color: #1F1E1B;
 }
 
-.blur_background, .blur_del {
+.blur_background {
   min-width: 600px;
   width: 100%;
   height: 100%;
@@ -52,28 +52,31 @@ input:hover {
   position: absolute;
 }
 
-.blur_del {
-  justify-content: center;
-  align-items: center;
-}
-
-.alert_box {
-  width: 70%;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 50px;
-  background: #1B1A17;
-  border-top: 8px solid #FF8303;
-}
-
-.del_button_section {
-  display: flex;
-  justify-content: center;
+.share_box {
   width: 100%;
+  margin: 0px 32px 0px 32px;
+  background-color: #1B1A17;
+  display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  padding: 14px 20px;
 }
 
-/*# sourceMappingURL=task_del_alert.css.map */
+.share_box_button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin: 32px;
+  transform: scale(2);
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  background-image: url("../images/share_button_background.svg");
+  background-size: cover;
+}
+.share_box_button:hover {
+  background-image: url("../images/share_button_background_hover.svg");
+}
+
+/*# sourceMappingURL=share_task.css.map */

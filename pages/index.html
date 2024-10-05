@@ -12,58 +12,30 @@
     <link rel="stylesheet" href="../styles/task.css">
     <link rel="stylesheet" href="../styles/main_page.css">
     <link rel="stylesheet" href="../styles/task_del_alert.css">
+    <link rel="stylesheet" href="../styles/edit_task.css">
+    <link rel="stylesheet" href="../styles/share_task.css">
+
 
     <script async src="../scripts/create_task.js"></script>
     <script async src="../scripts/delete_task.js"></script>
+    <script async src="../scripts/edit_task.js"></script>
+    <script async src="../scripts/share_task.js"></script>
 
     <title>To Do List</title>
 </head>
 
 <body>
-    <div id="del_alert">
-    </div>
+    <div id="alert"></div>
 
     <div class="create_task_form">
         <div class="tasks_inputs">
             <input class="create_tasks_input" id="title_tasks_input" type="text" placeholder="Title..."></input>
             <input class="create_tasks_input" id="body_tasks_input" type="text" placeholder="About..."></input>
         </div>
-        <button onclick="addFn()" class="add_button">+</button>
+        <button onclick="addTask()" class="add_button">+</button>
     </div>
 
-    <div id="tasks_list">
-    </div>
-
-
-
-
-
-
-    <button class="share_button"><img src="../images/share_button_icon.svg" alt=""></button>
-    <button class="share_button"><img src="../images/edit_button_icon.svg" alt=""></button>
-    <button class="share_button">i</button>
-
-    <div class="share_box">
-        <button class="share_box_button">
-            <img src="../images/share_button_copy.svg" alt="">
-        </button>
-
-        <button class="share_box_button">
-            <img src="../images/share_button_vk.svg" alt="">
-        </button>
-
-        <button class="share_box_button">
-            <img src="../images/share_button_telegram.svg" alt="">
-        </button>
-
-        <button class="share_box_button">
-            <img src="../images/share_button_whatsapp.svg" alt="">
-        </button>
-
-        <button class="share_box_button">
-            <img src="../images/share_button_facebook.svg" alt="">
-        </button>
-    </div>
+    <div id="tasks_list"></div>
 </body>
 
 </html>

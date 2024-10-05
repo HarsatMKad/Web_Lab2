@@ -8,6 +8,8 @@ class Task {
   }
 }
 
+let showInteractButtonKey = -1;
+
 loadTasks();
 
 function loadTasks(){
@@ -25,21 +27,53 @@ function loadTasks(){
    } else {
       for(let i = 0; i < taskListData.length; i++){
          tasksList.innerHTML += `
-         <div class="task">
-            <div class="task_text_area"> 
-               <div class="head_text_stile">` + taskListData[i].title + `</div>
-               <p class="sub_text_stile">` + taskListData[i].bodyTask + `</p>
+         <div>
+            <div class="task">
+               <div onclick="showInteractButton(` + i + `)" class="task_text_area"> 
+                  <div class="head_text_stile">` + taskListData[i].title + `</div>
+                  <p class="sub_text_stile">` + taskListData[i].bodyTask + `</p>
+               </div>
+               <button onclick="showDelAlert(` + i + `), closeInteractButtons()" class="dell_button">X</button>
             </div>
-            <button onclick="showDelAlert(` + i + `)" class="dell_button">X</button>
+            <div class="task_interact_buttons" id="interact_button_` + i + `">
+            </div>
          </div>
          `;
       }
    }
 }
 
-function addFn() {
-   var title = document.getElementById("title_tasks_input").value
-   var body = document.getElementById("body_tasks_input").value
+function closeInteractButtons(){
+   let buttonsSection = document.getElementById("interact_button_"+showInteractButtonKey);
+   buttonsSection.innerHTML = ``;
+   showInteractButtonKey = -1;
+}
+
+function showInteractButton(index) {
+   if(showInteractButtonKey != -1){
+      let oldButtonsSection = document.getElementById("interact_button_"+showInteractButtonKey);
+      oldButtonsSection.innerHTML = ``;
+   }
+
+   let buttonsSection = document.getElementById("interact_button_"+index);
+
+   if(showInteractButtonKey == index){
+      showInteractButtonKey = -1
+      buttonsSection.innerHTML = ``;
+   } else {
+      showInteractButtonKey = index;
+
+      buttonsSection.innerHTML = `
+      <button class="interact_button" onclick="showEditTask(` + index + `)"><img class="button_icon_scale" src="../images/edit_button_icon.svg" alt=""></button>
+      <button class="interact_button">i</button>
+      <button class="interact_button" onclick="showShareWondow()"><img class="button_icon_scale" src="../images/share_button_icon.svg" alt=""></button>
+      `
+   }
+}
+
+function addTask() {
+   let title = document.getElementById("title_tasks_input").value
+   let body = document.getElementById("body_tasks_input").value
 
    if(title != "" && body != ""){
       let taskList = JSON.parse(localStorage.taskList);

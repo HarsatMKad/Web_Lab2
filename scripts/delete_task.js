@@ -1,8 +1,7 @@
-
 function showDelAlert(index){
-    const tasksList = document.getElementById("del_alert");
-    tasksList.innerHTML = `
-        <div class="blur_background" >
+    const alertSection = document.getElementById("alert");
+    alertSection.innerHTML = `
+        <div class="blur_del">
             <div class="alert_box">
                 Delete this task ?
                 <div class="del_button_section">
@@ -15,13 +14,13 @@ function showDelAlert(index){
 }
 
 function fewf(){
-    const tasksList = document.getElementById("del_alert");
-    tasksList.innerHTML = ``;
+    const alertSection = document.getElementById("alert");
+    alertSection.innerHTML = ``;
 }
 
 function delTask(index){
-    let taskListData = JSON.parse(localStorage.taskList);
-    taskListData.splice(index, 1);
-    localStorage.setItem("taskList", JSON.stringify(taskListData));
+    let taskList = JSON.parse(localStorage.taskList);
+    taskList.splice(index, 1);
+    localStorage.setItem("taskList", JSON.stringify(taskList));
     location.reload();
  }
