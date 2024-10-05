@@ -6,7 +6,7 @@ function showEditTask(index){
         <div class="blur_background">
             <div class="edit_box">
                 <input class="head_input" id="edit_input_title_task" type="text" placeholder="Title..." value="` + taskListd[index].title + `"></input>
-                <input class="body_input" id="edit_input_body_task" type="text" placeholder="About..." value="` + taskListd[index].bodyTask + `"></input>
+                <textarea class="body_input" id="edit_input_body_task" type="text" placeholder="About...">` + taskListd[index].bodyTask + `</textarea>
 
                 <div>
                     <button onclick="cancelButton()" class="edit_button">Cancel</button>

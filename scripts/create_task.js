@@ -33,7 +33,7 @@ function loadTasks(){
                   <div class="head_text_stile">` + taskListData[i].title + `</div>
                   <p class="sub_text_stile">` + taskListData[i].bodyTask + `</p>
                </div>
-               <button onclick="showDelAlert(` + i + `), closeInteractButtons()" class="dell_button">X</button>
+               <button onclick="showDelAlert(` + i + `), closeInteractButtons()" class="del_button">X</button>
             </div>
             <div class="task_interact_buttons" id="interact_button_` + i + `">
             </div>
