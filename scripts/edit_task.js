@@ -9,17 +9,12 @@ function showEditTask(index){
                 <textarea class="body_input" id="edit_input_body_task" type="text" placeholder="About...">` + taskListd[index].bodyTask + `</textarea>
 
                 <div>
-                    <button onclick="cancelButton()" class="edit_button">Cancel</button>
+                    <button onclick="closeAlert()" class="edit_button">Cancel</button>
                     <button onclick="editTask(` + index + `)" class="edit_button">Save</button>
                 </div>
             </div>
         </div>
     `;
-}
-
-function cancelButton() {
-    const alertSection = document.getElementById("alert");
-    alertSection.innerHTML = ``;
 }
 
 function editTask(index){

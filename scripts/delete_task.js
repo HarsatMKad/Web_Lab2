@@ -6,16 +6,11 @@ function showDelAlert(index){
                 Delete this task ?
                 <div class="del_button_section">
                     <button onclick="delTask(` + index + `)" class="choice_button">Yes</button>
-                    <button onClick="fewf()" class="choice_button">No</button>
+                    <button onClick="closeAlert()" class="choice_button">No</button>
                 </div>
             </div>
         </div>
     `;
-}
-
-function fewf(){
-    const alertSection = document.getElementById("alert");
-    alertSection.innerHTML = ``;
 }
 
 function delTask(index){

@@ -5,27 +5,27 @@ class Task {
    constructor(title, bodyTask) {
       this.title = title;
       this.bodyTask = bodyTask;
-  }
+   }
 }
 
 let showInteractButtonKey = -1;
 
 loadTasks();
 
-function loadTasks(){
+function loadTasks() {
    let taskListData = JSON.parse(localStorage.taskList);
    const tasksList = document.getElementById("tasks_list");
 
-   if(taskListData.length == 0) {
+   if (taskListData.length == 0) {
       tasksList.innerHTML += `
-   <div class="zero_task_message">
-        <hr class="separate_line">
-        <H2 class="zero_task_message_text">No tasks</H2>
-        <hr class="separate_line">
-    </div>
+      <div class="zero_task_message">
+         <hr class="separate_line">
+         <H2 class="zero_task_message_text">No tasks</H2>
+         <hr class="separate_line">
+      </div>
    `;
    } else {
-      for(let i = 0; i < taskListData.length; i++){
+      for (let i = 0; i < taskListData.length; i++) {
          tasksList.innerHTML += `
          <div>
             <div class="task">
@@ -43,21 +43,21 @@ function loadTasks(){
    }
 }
 
-function closeInteractButtons(){
-   let buttonsSection = document.getElementById("interact_button_"+showInteractButtonKey);
+function closeInteractButtons() {
+   let buttonsSection = document.getElementById("interact_button_" + showInteractButtonKey);
    buttonsSection.innerHTML = ``;
    showInteractButtonKey = -1;
 }
 
 function showInteractButton(index) {
-   if(showInteractButtonKey != -1){
-      let oldButtonsSection = document.getElementById("interact_button_"+showInteractButtonKey);
+   if (showInteractButtonKey != -1) {
+      let oldButtonsSection = document.getElementById("interact_button_" + showInteractButtonKey);
       oldButtonsSection.innerHTML = ``;
    }
 
-   let buttonsSection = document.getElementById("interact_button_"+index);
+   let buttonsSection = document.getElementById("interact_button_" + index);
 
-   if(showInteractButtonKey == index){
+   if (showInteractButtonKey == index) {
       showInteractButtonKey = -1
       buttonsSection.innerHTML = ``;
    } else {
@@ -75,7 +75,7 @@ function addTask() {
    let title = document.getElementById("title_tasks_input").value
    let body = document.getElementById("body_tasks_input").value
 
-   if(title != "" && body != ""){
+   if (title != "" && body != "") {
       let taskList = JSON.parse(localStorage.taskList);
       let tast = new Task(title, body);
       taskList.push(tast);
