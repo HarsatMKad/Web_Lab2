@@ -1,7 +1,7 @@
-function showShareWondow(){
+function showShareWindow(){
     const alertSection = document.getElementById("alert");
     alertSection.innerHTML = `
-        <div onclick="closeAlert()" class="blur_background">
+        <div class="blur_background">
             <div class="share_box">
                 <button class="share_box_button">
                     <img src="../images/share_button_copy.svg" alt="">
@@ -25,6 +25,8 @@ function showShareWondow(){
             </div>
         </div>
     `;
+
+    alertSection.querySelector(".blur_background").addEventListener("click", closeAlert)
 }
 
 function closeAlert() {
