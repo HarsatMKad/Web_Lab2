@@ -10,6 +10,11 @@ class Task {
 
 let showInteractButtonKey = -1;
 
+if(JSON.parse(localStorage.getItem('taskList')) == null){
+   let arr = []
+   localStorage.setItem("taskList", JSON.stringify(arr));
+}
+
 loadTasks();
 
 document.querySelector(".add_button").addEventListener("click", addTask);
