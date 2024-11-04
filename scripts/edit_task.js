@@ -27,8 +27,8 @@ function editTask(index){
     let taskList = JSON.parse(localStorage.taskList);
     taskList[index].title = newTitleValue;
     taskList[index].bodyTask = newBodyValue;
-
-    localStorage.setItem("taskList", JSON.stringify(taskList));
+    
+    setTasksForStorage(taskList);
     const alertSection = document.getElementById("alert");
     alertSection.innerHTML = ``;
     location.reload();

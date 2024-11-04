@@ -19,6 +19,6 @@ function showDelAlert(index){
 function delTask(index){
     let taskList = JSON.parse(localStorage.taskList);
     taskList.splice(index, 1);
-    localStorage.setItem("taskList", JSON.stringify(taskList));
+    setTasksForStorage(taskList);
     location.reload();
  }
